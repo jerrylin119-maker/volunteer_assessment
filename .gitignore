@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+data/assessment.db*
+data/uploads/
+data/initial_accounts.csv
+.streamlit/secrets.toml
+.agents/
+.claude/
