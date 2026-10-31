@@ -56,7 +56,7 @@ def inject_css():
 
 
 def top_banner(user: dict | None = None, subtitle: str = ""):
-    """每個頁面最上方的系統標題橫幅,讓使用者一眼看出這是義消評核系統。"""
+    """每個頁面最上方的系統標題橫幅,讓使用者一眼看出這是義消自主評核系統。"""
     right = ""
     if user:
         icon, label, color = ROLE_BADGE.get(user["role"], ("👤", "", PRIMARY))
@@ -64,7 +64,7 @@ def top_banner(user: dict | None = None, subtitle: str = ""):
     st.markdown(f"""
     <div class="evaltop-banner">
       <div>
-        <div class="t1">🚒 義勇消防組織業務評核系統</div>
+        <div class="t1">🚒 義勇消防組織業務自主評核系統</div>
         <div class="t2">{subtitle or "臺東縣消防局義勇消防組織業務評核"}</div>
       </div>
       {right}
@@ -73,5 +73,5 @@ def top_banner(user: dict | None = None, subtitle: str = ""):
 
 
 def sidebar_brand():
-    st.markdown('<div class="sidebar-brand">🚒 義消評核系統</div>'
+    st.markdown('<div class="sidebar-brand">🚒 義消自主評核系統</div>'
                '<div class="sidebar-sub">臺東縣消防局</div>', unsafe_allow_html=True)

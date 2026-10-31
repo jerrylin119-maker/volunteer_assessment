@@ -1,10 +1,10 @@
-"""義勇消防組織業務評核系統:各分隊隨時上傳評核資料,大隊與業務科複評並彙整成績。"""
+"""義勇消防組織業務自主評核系統:各分隊隨時上傳評核資料,大隊與業務科複評並彙整成績。"""
 import streamlit as st
 
 from utils import auth, db, style
 from views import admin, battalion, results, review, submit, summary
 
-st.set_page_config(page_title="義消評核系統", page_icon="🚒", layout="wide")
+st.set_page_config(page_title="義消自主評核系統", page_icon="🚒", layout="wide")
 style.inject_css()
 
 db.init_db()
@@ -17,7 +17,7 @@ def login():
     with col:
         with st.container(border=True):
             st.markdown("<div style='text-align:center;font-size:3rem'>🚒</div>"
-                        "<h2 style='text-align:center;margin-top:.2rem'>義勇消防組織業務評核系統</h2>"
+                        "<h2 style='text-align:center;margin-top:.2rem'>義勇消防組織業務自主評核系統</h2>"
                         "<p style='text-align:center;color:#888;margin-top:-.5rem'>臺東縣消防局</p>",
                         unsafe_allow_html=True)
             st.caption("請使用核發給貴單位的帳號登入。分隊帳號只能看到與修改自己分隊的資料。")
